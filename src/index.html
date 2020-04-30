@@ -9,11 +9,10 @@
   </head>
   <body>
     <div id="main"></div>
-  </body>
-  <footer>
     <script type="text/javascript">
         var cachedTableau = localStorage.getItem('tableauEditor');
         var app = Elm.Editor.init({
+          node: document.getElementById('main'),
           flags: cachedTableau ? cachedTableau : null
         });
         app.ports.print.subscribe(function () {
@@ -23,6 +22,5 @@
           localStorage.setItem('tableauEditor', tableau);
         });
     </script>
-
-  </footer>
+  </body>
 </html>

@@ -5,15 +5,14 @@
     <title>Tableau Editor</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.3/css/all.css">
     <link rel="stylesheet" href="static/main.css?13d74b805ff305296f0e72f463311f13bb4c644c">
-    <script type="text/javascript" src="Editor.js?d5c95c8356e69bcfba6ded76b92a11b977b0852e"></script>
+    <script type="text/javascript" src="Editor.js?832356ba733d18e7888ef67341a6e2f550721637"></script>
   </head>
   <body>
     <div id="main"></div>
-  </body>
-  <footer>
     <script type="text/javascript">
         var cachedTableau = localStorage.getItem('tableauEditor');
         var app = Elm.Editor.init({
+          node: document.getElementById('main'),
           flags: cachedTableau ? cachedTableau : null
         });
         app.ports.print.subscribe(function () {
@@ -23,6 +22,5 @@
           localStorage.setItem('tableauEditor', tableau);
         });
     </script>
-
-  </footer>
+  </body>
 </html>

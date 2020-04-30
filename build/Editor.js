@@ -5550,7 +5550,7 @@ var $elm$core$Task$perform = F2(
 			$elm$core$Task$Perform(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
-var $elm$browser$Browser$document = _Browser_document;
+var $elm$browser$Browser$element = _Browser_element;
 var $author$project$Editor$None = {$: 'None'};
 var $author$project$Tableau$Open = {$: 'Open'};
 var $elm$core$Basics$composeR = F3(
@@ -14373,84 +14373,78 @@ var $author$project$Editor$viewSubsNode = function (z) {
 };
 var $author$project$Editor$view = function (model) {
 	var present = model.present;
-	return {
-		body: _List_fromArray(
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('tableau')
+			]),
+		_List_fromArray(
 			[
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('tableau')
+						$elm$html$Html$Attributes$class('actions')
 					]),
 				_List_fromArray(
 					[
 						A2(
-						$elm$html$Html$div,
+						$elm$html$Html$button,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('actions')
+								$elm$html$Html$Attributes$class('button'),
+								$elm$html$Html$Events$onClick($author$project$Editor$Prettify)
 							]),
 						_List_fromArray(
 							[
-								A2(
-								$elm$html$Html$button,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('button'),
-										$elm$html$Html$Events$onClick($author$project$Editor$Prettify)
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Prettify formulas')
-									])),
-								A2(
-								$elm$html$Html$button,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('button'),
-										$elm$html$Html$Events$onClick($author$project$Editor$Print)
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Print')
-									])),
-								$author$project$Editor$jsonExportControl(present.tableau),
-								$author$project$Editor$jsonImportControl(present.jsonImport),
-								A2(
-								$elm$html$Html$button,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('button'),
-										$elm$html$Html$Events$onClick($author$project$Editor$Undo)
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Undo')
-									])),
-								A2(
-								$elm$html$Html$button,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('button'),
-										$elm$html$Html$Events$onClick($author$project$Editor$Redo)
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Redo')
-									]))
+								$elm$html$Html$text('Prettify formulas')
 							])),
-						$author$project$Editor$jsonImportError(present.jsonImport),
-						$author$project$Editor$viewNode(
-						$author$project$Zipper$zipper(present.tableau)),
-						$author$project$Editor$verdict(present.tableau),
-						$author$project$Editor$problems(present.tableau),
-						$author$project$Helpers$Rules$help
-					]))
-			]),
-		title: 'Tableau Editor'
-	};
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('button'),
+								$elm$html$Html$Events$onClick($author$project$Editor$Print)
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Print')
+							])),
+						$author$project$Editor$jsonExportControl(present.tableau),
+						$author$project$Editor$jsonImportControl(present.jsonImport),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('button'),
+								$elm$html$Html$Events$onClick($author$project$Editor$Undo)
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Undo')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('button'),
+								$elm$html$Html$Events$onClick($author$project$Editor$Redo)
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Redo')
+							]))
+					])),
+				$author$project$Editor$jsonImportError(present.jsonImport),
+				$author$project$Editor$viewNode(
+				$author$project$Zipper$zipper(present.tableau)),
+				$author$project$Editor$verdict(present.tableau),
+				$author$project$Editor$problems(present.tableau),
+				$author$project$Helpers$Rules$help
+			]));
 };
-var $author$project$Editor$main = $elm$browser$Browser$document(
+var $author$project$Editor$main = $elm$browser$Browser$element(
 	{init: $author$project$Editor$init, subscriptions: $author$project$Editor$subscriptions, update: $author$project$Editor$update, view: $author$project$Editor$view});
 _Platform_export({'Editor':{'init':$author$project$Editor$main(
 	$elm$json$Json$Decode$oneOf(
