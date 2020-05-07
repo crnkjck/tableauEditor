@@ -1,5 +1,37 @@
 {
-  "dependencies": {
+  "name": "@fmfi-uk-1-ain-412/tableau-editor-embeddable",
+  "version": "0.1.0",
+  "description": "An embeddable version of a first-order tableau editor",
+  "repository": "https://github.com/crnkjck/tableauEditor",
+  "files": [
+    "build/**"
+  ],
+  "main": "build/Editor.js",
+  "author": {
+    "name": "Jozef Šiška",
+    "email": "jozef.siska@fmph.uniba.sk"
+  },
+  "contributors": [
+    {
+      "name": "Alexandra Nyitraiová"
+    },
+    {
+      "name": "Ján Kľuka",
+      "email": "jan.kluka@fmph.uniba.sk"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Jozef Šiška",
+      "email": "jozef.siska@fmph.uniba.sk"
+    },
+    {
+      "name": "Ján Kľuka",
+      "email": "jan.kluka@fmph.uniba.sk"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
     "elm": "^0.19.1-no-deps",
     "elm-live": "^2.7.5"
   }
