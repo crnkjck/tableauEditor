@@ -1,6 +1,6 @@
 {
   "name": "@fmfi-uk-1-ain-412/tableau-editor-embeddable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An embeddable version of a first-order tableau editor",
   "repository": "https://github.com/crnkjck/tableauEditor",
   "files": [
