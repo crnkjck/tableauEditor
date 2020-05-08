@@ -4,11 +4,13 @@
     <meta charSet="utf-8"/>
     <title>Tableau Editor</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.3/css/all.css">
-    <link rel="stylesheet" href="static/main.css?13d74b805ff305296f0e72f463311f13bb4c644c">
+    <link rel="stylesheet" href="static/main.css?bda02769ca0d63328c6e79126741637831d14384">
     <script type="text/javascript" src="Editor.js?832356ba733d18e7888ef67341a6e2f550721637"></script>
   </head>
   <body>
-    <div id="main"></div>
+    <div class="tableauEditor-container">
+      <div id="main"></div>
+    </div>
     <script type="text/javascript">
         var cachedTableau = localStorage.getItem('tableauEditor');
         var app = Elm.Editor.init({

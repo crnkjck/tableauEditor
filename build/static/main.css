@@ -1,28 +1,28 @@
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.tableau {
+.tableauEditor-container .tableau {
 	width: 100%;
 	border-spacing: 0;
 	border-collapse: collapse;
 }
 
-.formula {
+.tableauEditor-container .formula {
 	display: block;
 	border-top: 0.5px solid transparent;
 	min-width: 100%;
 	width: max-content;
 }
 
-.beta {
+.tableauEditor-container .beta {
 	min-width: 100%;
 }
 
-.formula > .beta {
+.tableauEditor-container .formula > .beta {
 	display: inline-flex;
 }
 
-.beta > .formula {
+.tableauEditor-container .beta > .formula {
 	display: inline-block;
 	min-width: 20px;
 	flex-grow: 1;
@@ -30,13 +30,13 @@ body {
 	border-left: 0.5px solid black;
 	padding-left: 2.25px;
 }
-.beta > .formula:first-child {
+.tableauEditor-container .beta > .formula:first-child {
 	border-left: none;
 	padding-left: 0;
 	padding-right: 2.25px;
 }
 
-.inputGroup {
+.tableauEditor-container .inputGroup {
 	display: flex;
 	font-size: .75rem;
 	align-items: baseline;
@@ -44,11 +44,11 @@ body {
 	margin-bottom: 0.125rem;
 }
 
-.formulaId {
+.tableauEditor-container .formulaId {
 	width: 0.625em;
 }
 
-.textInput {
+.tableauEditor-container .textInput {
 	text-align: center;
 	background-color: inherit;
 	font-size: .75rem;
@@ -60,91 +60,91 @@ body {
 	border-top-right-radius: 2px;
 }
 
-.textInput:focus {
+.tableauEditor-container .textInput:focus {
 	background-color: rgba(0, 0, 0, 0.05);
 	padding-bottom: 0;
 	border-bottom: 2px solid #16a;
 }
   
-.textInput:hover {
+.tableauEditor-container .textInput:hover {
 	background-color: rgba(0, 0, 0, 0.075);
 	border-bottom-style: solid;
 }
   
-.textInput:active {
+.tableauEditor-container .textInput:active {
 	background-color: rgba(0, 0, 0, 0.1);
 	border-bottom-style: solid;
 }
   
-.textInputFormula, .textInputFormulaWithSubst {
+.tableauEditor-container .textInputFormula, .tableauEditor-container .textInputFormulaWithSubst {
 	flex-grow: 1;
 	/* width: calc(100% - 5rem); */
 }
 
-.textInputFormulaWithSubst {
+.tableauEditor-container .textInputFormulaWithSubst {
 	/* width: calc(100% - 11.25rem); */
 }
 
-.textInputVariable, .textInputTerm, .textInputReference {
+.tableauEditor-container .textInputVariable, .tableauEditor-container .textInputTerm, .tableauEditor-container .textInputReference {
 	flex: none;
 	min-width: 1rem;
 }
 
-.expandControls {
+.tableauEditor-container .expandControls {
 	text-align: center;
 	margin-bottom: 0.125em;
 	margin-bottom: 0.125rem;
 }
 
-.actions button {
+.tableauEditor-container .actions button {
 	margin: 0 0.5em;
 }
 
-.actions {
+.tableauEditor-container .actions {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.problems {
+.tableauEditor-container .problems {
 	max-width: 97%;
 }
 
-.button, .onclick-menu:before {
+.tableauEditor-container .button, .tableauEditor-container .onclick-menu:before {
 	padding: 2px 10px;
 	background-color: #fff;
 	border-radius: 20px;
 	border: thin solid lightgray;
 	font-size: .75rem;
 }
-.button:focus, .onclick-menu:focus:before {
+.tableauEditor-container .button:focus, .tableauEditor-container .onclick-menu:focus:before {
 	background-color: rgba(0, 0, 0, 0.05);
 	border-color: #16a;
 }
-.button:hover, .onclick-menu:hover:before {
+.tableauEditor-container .button:hover, .tableauEditor-container .onclick-menu:hover:before {
 	background-color: rgba(0, 0, 0, 0.075);
 	border-color: #ccc;
 }
-.onclick-menu-content button:hover, .onclick-menu-content button:focus {
+.tableauEditor-container .onclick-menu-content button:hover, .tableauEditor-container .onclick-menu-content button:focus {
 	background-color: rgba(0, 0, 0, 0.075);
 }
-.button.active {
+.tableauEditor-container .button.active {
 	background-color: rgba(0, 0, 0, 0.1);
 	border-color: #bbb;
 }
-.button:active, .onclick-menu:active:before {
+.tableauEditor-container .button:active, .tableauEditor-container .onclick-menu:active:before {
 	background-color: rgba(0, 0, 0, 0.1);
 	border-color: #16a;
 }
-.onclick-menu-content button:active {
+.tableauEditor-container .onclick-menu-content button:active {
 	color: white;
 	background-color: #16a;
 }
 
-.closed {
+.tableauEditor-container .closed {
 	min-width: 17px;
 }
 
-.nodeProblems {
+.tableauEditor-container .nodeProblems {
 	text-align: center;
 	color: hsl(36, 100%, 40%);
 	font: small-caption;
@@ -152,44 +152,44 @@ body {
 	font-size: .75rem;
 }
 
-.nodeProblemsText {
+.tableauEditor-container .nodeProblemsText {
 	display: block;
 }
 
 /*custom menu component start*/
 /* The necessities */
-.onclick-menu {
+.tableauEditor-container .onclick-menu {
 	position: relative;
 	display: inline-block;
 }
 
-.onclick-menu.del:before {
+.tableauEditor-container .onclick-menu.del:before {
 	content: "Delete ▾";
 }
 
-.onclick-menu.change:before {
+.tableauEditor-container .onclick-menu.change:before {
 	content: "▾";
 }
-.onclick-menu.change .onclick-menu-content {
+.tableauEditor-container .onclick-menu.change .onclick-menu-content {
 	left: auto;
 	right: -2em;
 }
 
-.onclick-menu.add:before {
+.tableauEditor-container .onclick-menu.add:before {
 	content: "Add ▾";
 	margin-left: 5px;
 }
 
-.onclick-menu:focus {
+.tableauEditor-container .onclick-menu:focus {
 	pointer-events: none;
 }
 
-.onclick-menu:focus .onclick-menu-content {
+.tableauEditor-container .onclick-menu:focus .onclick-menu-content {
 	opacity: 1;
 	visibility: visible;
 }
 
-.onclick-menu-content {
+.tableauEditor-container .onclick-menu-content {
 	pointer-events: auto;
 	position: absolute;
 	z-index: 1;
@@ -200,20 +200,20 @@ body {
 	left: -1em;
 }
 
-.onclick-menu.no-pointer-events {
+.tableauEditor-container .onclick-menu.no-pointer-events {
 	pointer-events: auto !important;
 }
 
-.onclick-menu.no-visibility .onclick-menu-content {
+.tableauEditor-container .onclick-menu.no-visibility .onclick-menu-content {
 	visibility: visible !important;
 	display: none;
 }
 
-.onclick-menu.no-visibility:focus .onclick-menu-content {
+.tableauEditor-container .onclick-menu.no-visibility:focus .onclick-menu-content {
 	display: block;
 }
 
-.onclick-menu.no-opacity .onclick-menu-content {
+.tableauEditor-container .onclick-menu.no-opacity .onclick-menu-content {
 	opacity: 1 !important;
 }
 
@@ -221,7 +221,7 @@ body {
 Eye candy
 ( colors courtesy of https://kuler.adobe.com/try-color-theme-3350110 )
 */
-.onclick-menu {
+.tableauEditor-container .onclick-menu {
 	font: caption-small;
 	font: 400 11px system-ui;
 	font: -moz-button;
@@ -231,7 +231,7 @@ Eye candy
 	margin-right: 0.3em;
 	text-align: left;
 }
-.onclick-menu-content {
+.tableauEditor-container .onclick-menu-content {
 	background-color:white /* #364656 */;
 	width: auto;
 
@@ -243,7 +243,7 @@ Eye candy
 }
 
 /* arrow for the expanding part */
-/*.onclick-menu-content:before {
+/*.tableauEditor-container .onclick-menu-content:before {
 	content: "";
 	width: 0;
 	height: 0;
@@ -256,14 +256,14 @@ Eye candy
 	top: -10px;
 }*/
 
-.onclick-menu-content li {
+.tableauEditor-container .onclick-menu-content li {
 	color: black /* #f2f5e9 */;
 	list-style-type: none;
 	white-space: nowrap;
 }
 
 /* style the buttons */
-.onclick-menu-content button {
+.tableauEditor-container .onclick-menu-content button {
 	background: transparent;
 	border: none;
 	color: inherit;
@@ -283,80 +283,80 @@ Eye candy
 
 /*custom menu component end*/
 
-.actions #importJson {
+.tableauEditor-container .actions #importJson {
 	display: none;
 }
 
 /** delete button */
-button.delete {
+.tableauEditor-container button.delete {
 	padding: 0 0.3em;
 	border: thin solid lightgray;
 	background-color: inherit;
 	color: gray;
 }
 
-.premise {
+.tableauEditor-container .premise {
 	background-color: #ddeeff;
 }
-.premise:focus.textInput {
+.tableauEditor-container .premise:focus.textInput {
 	background-color: #d2e8ff;
 }
-.premise:hover.textInput {
+.tableauEditor-container .premise:hover.textInput {
 	background-color: #c7e3ff;
 }
-.premise:active.textInput {
+.tableauEditor-container .premise:active.textInput {
 	background-color: #bddeff;
 }
 
-.syntaxProblem {
+.tableauEditor-container .syntaxProblem {
 	background: rgb(255, 182, 193, 0.333);
 }
-.semanticsProblem {
+.tableauEditor-container .semanticsProblem {
 	background: rgba(255,211,131,0.333);
 }
-.syntaxProblem:focus.textInput {
+.tableauEditor-container .syntaxProblem:focus.textInput {
 	background: rgb(255, 182, 193, 0.5);
-  }
-.semanticsProblem:focus.textInput {
+}
+.tableauEditor-container .semanticsProblem:focus.textInput {
 	background: rgba(255,211,131,0.5);
-  }
-.syntaxProblem:hover.textInput {
+}
+.tableauEditor-container .syntaxProblem:hover.textInput {
 	background: rgb(255, 182, 193, 0.667);
-  }
-.semanticsProblem:hover.textInput {
+}
+.tableauEditor-container .semanticsProblem:hover.textInput {
 	background: rgba(255,211,131,0.667);
 }
-.syntaxProblem:active.textInput {
+.tableauEditor-container .syntaxProblem:active.textInput {
 	background: rgb(255, 182, 193, 0.833);
 }
-.semanticsProblem:active.textInput {
+.tableauEditor-container .semanticsProblem:active.textInput {
 	background: rgba(255,211,131,0.833);
 }
-.syntaxProblem.textInput {
+.tableauEditor-container .syntaxProblem.textInput {
 	border-bottom-color: #a12;
 }
-.semanticsProblem.textInput {
+.tableauEditor-container .semanticsProblem.textInput {
 	border-bottom-color: #c82;
 }
   
-.jsonImportError {
+.tableauEditor-container .jsonImportError {
 	color: #ff8c31;
 	font-size: 14px;
 	display: flex;
 	justify-content: center;
 }
 
-.rulesHelp {
+.tableauEditor-container .rulesHelp {
 	font-size: smaller;
 }
-.rulesHelp:after {
+.tableauEditor-container .rulesHelp:after {
 	content: ' ';
 	display: block;
 	clear: both;
 	height: 0;
 }
 
-.rulesHelp .rule {
+.tableauEditor-container .rulesHelp .rule {
 	display: inline-table;
 	border-collapse: collapse;
 	margin: 0.5em;
@@ -364,68 +364,68 @@ button.delete {
 	vertical-align: baseline;
 }
 
-.rulesHelp .rule td, .rulesHelp .rule th {
+.tableauEditor-container .rulesHelp .rule td, .tableauEditor-container .rulesHelp .rule th {
 	border: initial;
 	padding: .125em;
 }
 
-.rulesHelp .rule td {
+.tableauEditor-container .rulesHelp .rule td {
 	border-left: .5px solid black;
 }
 
-.rulesHelp .rule td:first-child {
+.tableauEditor-container .rulesHelp .rule td:first-child {
 	border-left: none;
 }
 
-.rulesHelp .rule tr:first-child {
+.tableauEditor-container .rulesHelp .rule tr:first-child {
 	border-bottom: .5px solid black;
 }
 
-.rulesHelpTable {
+.tableauEditor-container .rulesHelpTable {
 	border-collapse: collapse;
 	width: 100%;
 	box-sizing: border-box;
 }
 
-.rulesHelpTable th, td {
+.tableauEditor-container .rulesHelpTable th, .tableauEditor-container .rulesHelpTable td {
 	text-align: center;
 	padding: .25em 0px;
 	border-bottom: 1px solid #ddd;
 	max-width: 400px;
 }
 
-.symbols > p {
+.tableauEditor-container .symbols > p {
 	margin: 0px;
 }
 
-.rulesHelpTable  tr:nth-child(even){background-color: #def}
+.tableauEditor-container .rulesHelpTable tr:nth-child(even){background-color: #def}
 
-.rulesHelpTable th {
+.tableauEditor-container .rulesHelpTable th {
 	background-color: #6193a2;
 	color: white;
 	padding: 2px;
 }
 
-.rulesHelpTable .formula {
+.tableauEditor-container .rulesHelpTable .formula {
 	text-align: center;
 	display: inline-block;
 	width: initial;
 	min-width: initial;
 }
 
-.rulesHelp > h2 {
+.tableauEditor-container .rulesHelp > h2 {
 	padding: 0 10px;
 }
-.half {
+.tableauEditor-container .half {
 	width: 50%;
 	float: left;
 	padding: 0 0.5rem 0 0;
 	box-sizing: border-box;
 }
-.half + .half {
+.tableauEditor-container .half + .half {
 	padding: 0 0 0 0.5rem;
 }
-.full {
+.tableauEditor-container .full {
 	clear: left;
 	width: 100%;
 	float: left;
@@ -433,7 +433,7 @@ button.delete {
 }
 
 @media only screen and (max-width: 1180px) {
-	.half {
+	.tableauEditor-container .half {
 		width:100%;
 		padding: 0;
 	}
@@ -445,23 +445,23 @@ button.delete {
  */
 
 @media print {
-	body > div > *:not(.formula):not(.verdict):not(.problems),
-	.onclick-menu, .nodeProblems, .button
+	.tableauEditor-container  > *:not(.formula):not(.verdict):not(.problems),
+	.tableauEditor-container .onclick-menu, .tableauEditor-container .nodeProblems, .tableauEditor-container .button
 	{
 		display: none;
 	}
-	.closed {
+	.tableauEditor-container .tableauEditor-container .closed {
 		display: inline-block;
 	}
-	.textInput {
+	.tableauEditor-container .textInput {
 		border-bottom: none;
 	}
-	.textInput.syntaxProblem, .textInput.semanticsProblem {
+	.tableauEditor-container .textInput.syntaxProblem, .textInput.semanticsProblem {
 		border-bottom-style: dashed;
 		border-bottom-width: 1px;
 	}
 	/* Print color backgrounds for webkit browsers */
-	body {
+	.tableauEditor-container {
 		-webkit-print-color-adjust: exact;
 	}
 }
